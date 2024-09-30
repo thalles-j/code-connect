@@ -88,7 +88,8 @@ form div label{
     display: block;
     margin-bottom: 8px;
 }
-form div input, textarea{
+form div input, 
+textarea{
     width: 100%;
     padding: 8px 16px;
     background-color: var(--secondary-color);
@@ -146,13 +147,13 @@ textarea{
 
 .btn-remove::after{
     content: "";
-    background-image: url("./src/img/trash.sgv");
+    background-image: url("/src/img/trash.svg");
     background-size: contain;
     background-repeat: no-repeat;
     width: 15px;
     height: 15px;
     display: inline-block;
-    position: relative;
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     margin-left: 8px;
@@ -161,19 +162,19 @@ textarea{
 .btn-publish{
     background-color: var(--primary-color);
     color: var(--itens-background);
-    border: 1px solid var(--primary-color);
+    border: none;
     position: relative;
     
 }
 .btn-publish::after{
     content: "";
-    background-image: url("./src/img/trash.sgv");
+    background-image: url("/src/img/arrow_forward2.svg");
     background-size: contain;
     background-repeat: no-repeat;
     width: 15px;
     height: 15px;
     display: inline-block;
-    position: relative;
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     margin-left: 8px;
