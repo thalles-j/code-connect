@@ -50,7 +50,85 @@ aside{
     gap: 10px;
     align-items: center;
     text-decoration:none;
-    color: var(--text-color);
+    color: var(--secondary-color);
     font-size: 22px;
+
+}
+.list-links li:first-of-type a {
+    color: var(--primary-color);
+
+}
+
+.link-destaque{
+    border:1px solid var(--primary-color);
+    padding: 12px 30px;
+    border-radius: 8px;
+}
+main{
+    background-color: var(--itens-background);
+    border-radius: 10px;
+    padding: 32px;
+    display: flex;
+    gap: 24px;
+}
+h2{
+    font-size: 26px;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+form div label{
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 8px;
+}
+form div input, textarea{
+    width: 100%;
+    padding: 8px 16px;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 4px;
+    font-family: var(--font-family);
+    line-height: 22.5px;
+
+}
+form div input{
+    height: 39px;
+}
+textarea{
+    height: 161px;
+}
+
+.list-tags li{
+    display: flex;
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    gap: 10px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    
+}
+
+.list-tags {
+    display: flex;
+}
+.container-btn{
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+
+}
+
+.container-btn button{
+    width: 50%;
+    padding: 12px 32px 12px 32px;
+    text-align: center;
+    border-radius: 8px;
 
 }
