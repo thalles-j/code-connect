@@ -130,5 +130,51 @@ textarea{
     padding: 12px 32px 12px 32px;
     text-align: center;
     border-radius: 8px;
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-weight: 500;
 
+}
+
+.btn-remove{
+    background-color: var(--itens-background);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    position: relative;
+
+}
+
+.btn-remove::after{
+    content: "";
+    background-image: url("./src/img/trash.sgv");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 8px;
+}
+
+.btn-publish{
+    background-color: var(--primary-color);
+    color: var(--itens-background);
+    border: 1px solid var(--primary-color);
+    position: relative;
+    
+}
+.btn-publish::after{
+    content: "";
+    background-image: url("./src/img/trash.sgv");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 8px;
 }
