@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+:root{
+    --background-color:#00090E;
+    --text-color:#E1E1E1;
+    --primary-color:#81FE88;
+    --secondary-color:#888888;
+    --tag-color:#171D1F;
+    --font-family: "Prompt", sans-serif;
+    --itens-background:#171D1F;
+}
+
+body{
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: 100vh;
+    
+    padding: 56px 0;
+}
+section{
+    border-radius: 20px;
+    background-color: var(--itens-background);
+    margin: 10px;
+    width: 800px;
+    height: 100%;
+    
+}
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+    gap: 27px;
+}
+
+.container-img {
+    margin: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    display: flex;
+}
+.container-img img {
+    width: 407px;
+    max-width: 100%;
+    height: auto;
+}
+
+#fundoLogo{
+    width: auto;
+    height: 500px;
+}
+.container-main{
+    height: 90%;
+    width: 50%;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-main h2{
+    font-weight: 600;
+
+}
+.container-main h3{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 10px;
+    margin: 2rem 0;
+}
+.container-form{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+.container-form form{
+    display: flex;
+    flex-direction: column;
+}
+.container-form form label{
+    margin: 0;
+    font-size: 15px;
+}
+input{
+    margin: 5px 0;
+    outline: none;
+    width: 76%;
+    border: none;
+    background-color: var(--secondary-color);
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+.container-checkbox{
+    margin: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.container-checkbox input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+}
+.container-checkbox span{
+    text-align: end;
+    margin: 10px;
+}
