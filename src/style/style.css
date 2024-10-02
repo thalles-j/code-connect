@@ -34,7 +34,6 @@ aside{
     text-align: center;
 
 }
-
 .list-links{
     display: flex;
     flex-direction: column;
@@ -58,12 +57,12 @@ aside{
     color: var(--primary-color);
 
 }
-
 .link-destaque{
     border:1px solid var(--primary-color);
     padding: 12px 30px;
     border-radius: 8px;
 }
+
 main{
     background-color: var(--itens-background);
     border-radius: 10px;
@@ -71,6 +70,73 @@ main{
     display: flex;
     gap: 24px;
 }
+.container-upload-img button{
+    margin: 16px 0 8px 0;
+    background-color: var(--itens-background);
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    color: var(--secondary-color);
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font-family: var(--font-family);
+    font-size: 12px;
+    position: relative;
+}
+.container-upload-img button::after{
+    content: "";
+    background-image: url("/src/img/upload.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 8px;
+
+}
+.container-img{
+    height: 368px;
+    padding: 24px 16px;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+
+}
+.container-img-name{
+    display: flex;
+    gap: 8px;
+    color: var(--secondary-color);
+    font-size: 15px;
+
+}
+.main-img{
+    border-radius: 8px;
+    height: 100%;
+    object-fit: cover;
+
+}
+.container-desc{
+    width: 442px;
+}
+.container-btn{
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+
+}
+
+.container-btn button{
+    width: 50%;
+    padding: 12px 32px 12px 32px;
+    text-align: center;
+    border-radius: 8px;
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-weight: 500;
+}
+
 h2{
     font-size: 26px;
     margin-bottom: 40px;
@@ -119,28 +185,12 @@ textarea{
 .list-tags {
     display: flex;
 }
-.container-btn{
-    display: flex;
-    gap: 24px;
-    justify-content: space-between;
-
-}
-
-.container-btn button{
-    width: 50%;
-    padding: 12px 32px 12px 32px;
-    text-align: center;
-    border-radius: 8px;
-    font-family: var(--font-family);
-    font-size: 18px;
-    font-weight: 500;
-}
-
 .btn-remove{
     background-color: var(--itens-background);
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
     position: relative;
+    
 }
 
 .btn-remove::after{
@@ -163,6 +213,7 @@ textarea{
     border: none;
     position: relative;
     
+    
 }
 .btn-publish::after{
     content: "";
@@ -176,56 +227,4 @@ textarea{
     top: 50%;
     transform: translateY(-50%);
     margin-left: 8px;
-}
-
-.container-desc{
-    width: 442px;
-}
-.main-img{
-    border-radius: 8px;
-    height: 100%;
-    object-fit: cover;
-
-}
-.container-img{
-    height: 368px;
-    padding: 24px 16px;
-    background-color: var(--secondary-color);
-    border-radius: 8px;
-
-}
-.container-upload-img button{
-    margin: 16px 0 8px 0;
-    background-color: var(--itens-background);
-    border: 1px solid var(--secondary-color);
-    border-radius: 8px;
-    color: var(--secondary-color);
-    width: 100%;
-    text-align: center;
-    padding: 12px;
-    font-family: var(--font-family);
-    font-size: 12px;
-    position: relative;
-}
-.container-upload-img button::after{
-    content: "";
-    background-image: url("/src/img/upload.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: 8px;
-
-}
-
-.container-img-name{
-    display: flex;
-    gap: 8px;
-    color: var(--secondary-color);
-    font-size: 15px;
-
 }
