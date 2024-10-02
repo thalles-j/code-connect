@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 :root{
     --background-color:#00090E;
     --text-color:#E1E1E1;
@@ -26,14 +28,42 @@ body{
     gap: 27px;
     padding: 56px 0;
 }
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+@media (max-width:1366px){
+    body{
+        height: 80vh;
+    }
+    aside{
+        background-color: var(--itens-background);
+        border-radius: 10px;
+        height: 100%;
+        padding: 40px 25px;
+        text-align: center;
+    
+    }
+}
+
 aside{
     background-color: var(--itens-background);
     border-radius: 10px;
     height: 100%;
     padding: 40px 16px;
     text-align: center;
+    width: 15%;
 
 }
+<<<<<<< HEAD
+=======
+nav li{
+    display: flex;
+}
+
+>>>>>>> 5828c67b43df10cd8b096b2413678df16bcd6b46
 .list-links{
     display: flex;
     flex-direction: column;
@@ -67,8 +97,10 @@ main{
     background-color: var(--itens-background);
     border-radius: 10px;
     padding: 32px;
+    height: 100%;
     display: flex;
     gap: 24px;
+    width: 80%;
 }
 .container-upload-img button{
     margin: 16px 0 8px 0;
@@ -179,6 +211,7 @@ textarea{
     gap: 10px;
     padding: 4px 8px;
     border-radius: 4px;
+    margin: 0 2px;
     
 }
 
@@ -228,3 +261,73 @@ textarea{
     transform: translateY(-50%);
     margin-left: 8px;
 }
+<<<<<<< HEAD
+=======
+
+.container-desc{
+    width: 442px;
+}
+.main-img{
+    border-radius: 8px;
+    height: 100%;
+    object-fit: cover;
+
+}
+.container-img{
+    height: 368px;
+    padding: 24px 16px;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 600px;
+
+}
+.container-upload-img button{
+    margin: 16px 0 8px 0;
+    background-color: var(--itens-background);
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    color: var(--secondary-color);
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font-family: var(--font-family);
+    font-size: 12px;
+    position: relative;
+}
+.container-upload-img button::after{
+    content: "";
+    background-image: url("/src/img/upload.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 8px;
+
+}
+
+.container-img-name{
+    display: flex;
+    gap: 8px;
+    color: var(--secondary-color);
+    font-size: 15px;
+    max-width: 600px;
+
+}
+
+.danger{
+    border: 3px solid red;
+
+}
+.danger:focus{
+    border: 3px solid red;
+    color: rgb(186, 0, 0);
+    outline: none;
+}
+>>>>>>> 5828c67b43df10cd8b096b2413678df16bcd6b46
