@@ -57,13 +57,10 @@ aside{
     width: 15%;
 
 }
-<<<<<<< HEAD
-=======
 nav li{
     display: flex;
 }
 
->>>>>>> 5828c67b43df10cd8b096b2413678df16bcd6b46
 .list-links{
     display: flex;
     flex-direction: column;
@@ -261,8 +258,6 @@ textarea{
     transform: translateY(-50%);
     margin-left: 8px;
 }
-<<<<<<< HEAD
-=======
 
 .container-desc{
     width: 442px;
@@ -330,4 +325,4 @@ textarea{
     color: rgb(186, 0, 0);
     outline: none;
 }
->>>>>>> 5828c67b43df10cd8b096b2413678df16bcd6b46
+
