@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 :root{
     --background-color:#00090E;
     --text-color:#E1E1E1;
@@ -26,13 +28,37 @@ body{
     gap: 27px;
     padding: 56px 0;
 }
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+@media (max-width:1366px){
+    body{
+        height: 80vh;
+    }
+    aside{
+        background-color: var(--itens-background);
+        border-radius: 10px;
+        height: 100%;
+        padding: 40px 25px;
+        text-align: center;
+    
+    }
+}
+
 aside{
     background-color: var(--itens-background);
     border-radius: 10px;
     height: 100%;
     padding: 40px 16px;
     text-align: center;
+    width: 15%;
 
+}
+nav li{
+    display: flex;
 }
 
 .list-links{
@@ -68,8 +94,10 @@ main{
     background-color: var(--itens-background);
     border-radius: 10px;
     padding: 32px;
+    height: 100%;
     display: flex;
     gap: 24px;
+    width: 80%;
 }
 h2{
     font-size: 26px;
@@ -113,6 +141,7 @@ textarea{
     gap: 10px;
     padding: 4px 8px;
     border-radius: 4px;
+    margin: 0 2px;
     
 }
 
@@ -192,6 +221,10 @@ textarea{
     padding: 24px 16px;
     background-color: var(--secondary-color);
     border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 600px;
 
 }
 .container-upload-img button{
@@ -227,5 +260,16 @@ textarea{
     gap: 8px;
     color: var(--secondary-color);
     font-size: 15px;
+    max-width: 600px;
 
+}
+
+.danger{
+    border: 3px solid red;
+
+}
+.danger:focus{
+    border: 3px solid red;
+    color: rgb(186, 0, 0);
+    outline: none;
 }
