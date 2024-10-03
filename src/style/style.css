@@ -33,19 +33,6 @@ section{
     display: flex;
     gap: 26px;
 }
-@media (max-width:1366px){
-    body{
-        height: 80vh;
-    }
-    aside{
-        background-color: var(--itens-background);
-        border-radius: 10px;
-        height: 100%;
-        padding: 40px 25px;
-        text-align: center;
-    
-    }
-}
 
 aside{
     background-color: var(--itens-background);
@@ -97,21 +84,22 @@ main{
     display: flex;
     gap: 24px;
     width: 100%;
+    max-width: 1200px;
 }
-.container-upload-img button{
+#btn-upload{
     margin: 16px 0 8px 0;
     background-color: var(--itens-background);
     border: 1px solid var(--secondary-color);
     border-radius: 8px;
     color: var(--secondary-color);
-    width: 100%;
+    width: 90%;
     text-align: center;
     padding: 12px;
     font-family: var(--font-family);
     font-size: 12px;
     position: relative;
 }
-.container-upload-img button::after{
+#btn-upload::after{
     content: "";
     background-image: url("/src/img/upload.svg");
     background-size: contain;
@@ -125,6 +113,17 @@ main{
     margin-left: 8px;
 
 }
+
+#btn-remove-upload{
+    border: none;
+    background-color: var(--itens-background);
+    color: var(--secondary-color);
+
+}
+#btn-remove-upload:activex{
+    color: var(--text-color);
+}
+
 .container-img{
     height: 368px;
     padding: 24px 16px;
@@ -174,7 +173,9 @@ h2{
 form{
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    width: 100%;
+    gap: 20px;
+    max-width: 500px;
 }
 form div label{
     font-size: 18px;
@@ -241,6 +242,7 @@ textarea{
     color: var(--itens-background);
     border: none;
     position: relative;
+    width: 100%;
     
     
 }
@@ -259,7 +261,7 @@ textarea{
 }
 
 .container-desc{
-    width: 442px;
+    width: 100%;
 }
 .main-img{
     border-radius: 8px;
@@ -278,7 +280,7 @@ textarea{
     width: 600px;
 
 }
-.container-upload-img button{
+#btn-upload{
     margin: 16px 0 8px 0;
     background-color: var(--itens-background);
     border: 1px solid var(--secondary-color);
@@ -291,7 +293,7 @@ textarea{
     font-size: 12px;
     position: relative;
 }
-.container-upload-img button::after{
+#btn-upload::after{
     content: "";
     background-image: url("/src/img/upload.svg");
     background-size: contain;
@@ -325,3 +327,49 @@ textarea{
     outline: none;
 }
 
+@media(max-width:1500px){
+    section{
+        margin: 1rem;
+        display: flex;
+        gap: 26px;
+       
+        height: auto;
+    }
+    
+    aside{
+        background-color: var(--itens-background);
+        border-radius: 10px;
+        height: 100%;
+        padding: 40px 16px;
+        text-align: center;
+        
+    
+    }
+    main{
+        background-color: var(--itens-background);
+        border-radius: 10px;
+        padding: 30px;
+        height: 100%;
+        display: flex;
+        gap: 24px;
+        width: 100%;
+        max-width: 900px;
+    }
+    .container-img{
+        height: 368px;
+        padding: 24px 16px;
+        background-color: var(--secondary-color);
+        border-radius: 8px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        width: 100%;
+    
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 400px;
+    }
+}

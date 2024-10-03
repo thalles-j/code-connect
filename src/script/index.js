@@ -37,7 +37,8 @@ inputUpload.addEventListener('change', async (e) => {
     try {
       const conteudoArquivo = await lerConteudoArquivo(arquivo);
       imgPrincipal.src = conteudoArquivo.url;
-      nomeImg.textContent = conteudoArquivo.nome;
+      nomeImg.innerHTML = conteudoArquivo.nome;
+
       }
       catch (erro){
         console.error('Erro na leitura do arquivo');
@@ -46,6 +47,23 @@ inputUpload.addEventListener('change', async (e) => {
       }
   }
 });
+
+const btnRemoveImg = document.querySelector('#btn-remove-upload');
+
+btnRemoveImg.addEventListener('click', () =>{
+  // Verificar se existe uma imagem carregada
+  if (imgPrincipal.src && imgPrincipal.src !== window.location.href) {
+    // Se tiver imagem, remover a imagem e o nome
+    imgPrincipal.src = ""; 
+    nomeImg.innerHTML = ""; 
+    inputUpload.value = ""; // Limpar o input file
+  } else {
+    // Se não tiver imagem, exibir mensagem de alerta
+    alert("Não há imagem carregada para remover.");
+  }
+});
+
+
 
 //adicionar tags do projeto
 const inputTags = document.querySelector('#input-tags');
@@ -63,7 +81,7 @@ inputTags.addEventListener('keypress', (e) =>{
 
             if (isOffensive) {
                 inputTags.classList.add('danger');
-                inputTags.innerHTML = 'Palavra Ofensiva!'
+                inputTags.value = "Palavra Ofensiva!!"
                 
             } else {
                 inputTags.classList.remove('danger');
@@ -75,3 +93,22 @@ inputTags.addEventListener('keypress', (e) =>{
         }
     }
 });
+
+listTags.addEventListener('click', (e) =>{
+  if(e.target.classList.contains('remove-tag')){
+    const tagRemovedora = e.target.parentElement;
+    listTags.removeChild(tagRemovedora);
+  }
+});
+
+const tagsOn = ['Front-end','Programação','Data Science','Back-end','Full-stack','Desing Gráfico'];
+
+async function verificaTagsOn(tagText) {
+  return new Promise((resolve) =>{
+    setTimeout(() =>{
+      resolve(tagsOn.includes(tagText));
+
+    }, 1000);
+  });
+  
+}
