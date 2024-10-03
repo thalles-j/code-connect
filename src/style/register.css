@@ -58,7 +58,7 @@ main {
     height: 500px;
 }
 .container-main{
-    height: 90%;
+    height: 500px;
     width: 50%;
     margin: 1rem;
     display: flex;
