@@ -58,7 +58,6 @@ main {
     height: 500px;
 }
 .container-main{
-    height: 90%;
     width: 50%;
     margin: 1rem;
     display: flex;
@@ -204,4 +203,44 @@ hr{
 }
 .container-request a:hover{
     opacity: 0.8;
+}
+@media(max-width:730px){
+    section{
+        border-radius: 20px;
+        background-color: var(--itens-background);
+        margin: 0;
+        width: 650px;
+        height: 1234px;
+        
+    }
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 900px;
+        padding: 00px;
+        gap: 0;
+    }
+    #fundoLogo{
+        width: 485px;
+        height: 415px;
+        margin: 0;
+        content: url('/src/img/imgLogin730media.png');
+    }
+    .container-img {
+        margin: 1rem;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        width: 300px;
+        height: 300px;
+        display: flex;
+    }
+    .container-img img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        
+    }
 }
