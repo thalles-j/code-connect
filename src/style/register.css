@@ -73,7 +73,7 @@ main {
     font-size: 18px;
     font-weight: 400;
     line-height: 10px;
-    margin: 2rem 0;
+    margin: 1.5rem 0;
 }
 .container-form{
     display: flex;
@@ -171,12 +171,12 @@ hr{
     display: inline-flex;
     width: 80%;
     justify-content: center;
+    transition: ease-in-out 300ms;
 }
 .social-icons a{
     text-align: center;
     margin: 0 8px;
     color: var(--text-color);
-    transition: ease-in-out 300ms;
 }
 .social-icons a:hover{
     color: var(--primary-color);
@@ -189,19 +189,19 @@ hr{
     text-align: center;
 }
 
-.container-request{
+.container-login{
     text-align: center;
     width: 80%;  
 }
-.container-request p{
+.container-login p{
     font-size: 13px;
     margin: 10px 0 0 8px;
 }
-.container-request a{
+.container-login a{
     color: var(--primary-color);
     text-decoration: none;
     
 }
-.container-request a:hover{
+.container-login a:hover{
     opacity: 0.8;
 }
