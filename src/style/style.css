@@ -128,29 +128,14 @@ main{
 }
 
 .container-img{
-
-    height: 368px;
+    width: 900px;
+    height: auto;
     padding: 24px 16px;
     background-color: var(--secondary-color);
     border-radius: 8px;
 
 }
-.container-img-name{
-    display: flex;
-    gap: 8px;
-    color: var(--secondary-color);
-    font-size: 15px;
 
-}
-.main-img{
-    border-radius: 8px;
-    height: 100%;
-    object-fit: cover;
-
-}
-.container-desc{
-    width: 442px;
-}
 .container-btn{
     display: flex;
     gap: 24px;
@@ -277,6 +262,7 @@ textarea{
     border-radius: 8px;
     height: 100%;
     object-fit: cover;
+    
 
 }
 .container-img{
@@ -318,6 +304,7 @@ textarea{
 
 }
 
+
 .container-img-name{
     display: flex;
     gap: 8px;
@@ -336,7 +323,7 @@ textarea{
     color: rgb(186, 0, 0);
     outline: none;
 }
-.fixedBar{
+.container-fixedBar{
     display: none;
 }
 
@@ -442,7 +429,7 @@ textarea{
         margin: 0 2rem;
         display: flex;
         gap: 0;
-        height: 1120px;
+        height: 1320px;
         max-width: 100%;
         width: 100%;
     }
@@ -477,6 +464,7 @@ textarea{
         border-radius: 8px;
         height: 100%;
         object-fit: cover;
+        max-height: 90%;
     
     }
     .container-desc{
@@ -624,48 +612,66 @@ textarea{
     aside{
         display: none;
     }
-    .container-fixedBar{
-        display: block;
-        position: fixed;
-        bottom: 0; /* Fixa a barra na parte inferior */
+    .container-fixedBar {
+        display: grid;
+        width: 100%;
+        position: fixed; /* Fixa o contêiner na tela */
+        bottom: 0;       /* Coloca o contêiner no rodapé */
         left: 0;
-        width: 100%; /* Ocupa toda a largura da tela */
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 10px 0;
-        z-index: 1000; /* Garante que ela fique no topo de outros elementos */
+        z-index: 1000;   /* Garante que fique por cima de outros elementos */
     }
-    .fixedBar{
+    
+    .fixedBar {
+        padding: 1rem;
         display: inline-flex;
+        width: 100%;
+        background-color: #333; /* Personalize conforme necessário */
     }
-    .fixedBar ul{
+    
+    .fixedBar-links {
         display: inline-flex;
-        width: 100px;
+        width: 100%;
         height: auto;
         align-items: center;
         justify-content: center;
     }
-    .fixedBar li{
-        width: 80px;
-    }
-    .fixedBar li a{
-        font-size: 10px;
-        width: 50px;
-        text-decoration: none;
-        text-align: center;
-        margin: 0 8px;
-        color: var(--text-color);
-        transition: ease-in-out 300ms;
-    }
-    .fixedBar img{
-        width: 33px;
-    }
-    .fixedBar-links{
-        gap: 5px;
-        text-align: center;
+    
+    .fixedBar-links li {
         list-style-type: none;
-           
+        margin: 0 1rem;
+    }
+    
+    .fixedBar-links li a {
+        display: inline-flex;
+        flex-direction: column; /* Organiza a imagem acima do texto */
+        align-items: center;
+        text-decoration: none;
+        color: white; /* Cor do texto */
+        font-size: 14px;
+        transition: color 300ms ease-in-out;
+    }
+    
+    .fixedBar-links li a img {
+        width: 30px;
+        margin-bottom: 5px; /* Espaçamento entre imagem e texto */
+    }
+    
+    .fixedBar-links li a:hover {
+        color: #FFD700; /* Efeito ao passar o mouse */
+    }
+    
+}
+@media(max-width:624px){
+    .main-img{
+        border-radius: 8px;
+        height: 100%;
+        object-fit: cover;
+        max-height: 300px;
+    
+    }
+    .container-img{
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -692,7 +698,7 @@ textarea{
     
     .container-img{
         width: 100%;
-        height: 308px;
+        height: auto;
         padding: 24px 16px;
         background-color: var(--secondary-color);
         border-radius: 8px;
@@ -706,6 +712,8 @@ textarea{
     
     }
     .main-img{
+        max-width: 500px;
+        width: 100%;
         border-radius: 8px;
         height: 100%;
         object-fit: cover;
