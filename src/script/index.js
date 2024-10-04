@@ -55,8 +55,8 @@ btnRemoveImg.addEventListener('click', () =>{
   if (imgPrincipal.src && imgPrincipal.src !== window.location.href) {
     // Se tiver imagem, remover a imagem e o nome
     imgPrincipal.src = ""; 
-    nomeImg.innerHTML = ""; 
-    inputUpload.value = ""; // Limpar o input file
+    nomeImg.innerHTML = "Envie um arquivo"; 
+    inputUpload.value = "";
   } else {
     // Se não tiver imagem, exibir mensagem de alerta
     alert("Não há imagem carregada para remover.");

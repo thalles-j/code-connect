@@ -19,7 +19,6 @@ body{
     justify-content: center;
     align-items: start;
     height: 100vh;
-    
     padding: 56px 0;
 }
 section{
@@ -27,7 +26,10 @@ section{
     background-color: var(--itens-background);
     margin: 10px;
     width: 800px;
-    height: 100%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    
     
 }
 main {
@@ -97,6 +99,9 @@ input{
     border-radius: 5px;
     font-size: 12px;
     border: solid var(--secondary-color);
+}
+input::placeholder{
+    color: var(--text-color);
 }
 input:focus{
     border: solid var(--primary-color);
@@ -206,12 +211,13 @@ hr{
 }
 .container-request p{
     font-size: 13px;
-    margin: 10px 0 0 8px;
+    margin: 12px 0 0 8px;
 }
-.container-request a{
+.container-request p a{
     color: var(--primary-color);
     text-decoration: none;
     margin: 1rem 0;
+    font-size: 16px;
     
 }
 .container-request a:hover{
@@ -239,8 +245,8 @@ hr{
         gap: 0;
     }
     #fundoLogo{
-        width: 385px;
-        height: 315px;
+        width: 505px;
+        height: 415px;
         margin: 0;
         content: url('/src/img/imgLogin730media.png');
     }
@@ -265,7 +271,7 @@ hr{
     .container p{
         margin: 2rem 0;
     }
-    .container-request a{
+    .container-request p a{
         font-size: 17px;
         margin: 30px 0;
     }

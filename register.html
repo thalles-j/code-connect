@@ -31,19 +31,22 @@
                 </h3>
                 <div class="container-form">
                     <form>
-                        <label for="user">Nome</label>
-                        <input type="text" name="user" id="inputUser">
+                        <label for="user">Usuário</label>
+                        <input type="text" name="user" id="inputUser" placeholder="Digite seu usuário:">
 
                         <label for="email">Email</label>
-                        <input type="text" name="email" id="inputEmailUser">
+                        <input type="text" name="email" id="inputEmailUser" placeholder="Digite seu email:">
                         
                         <label for="password">Senha</label>
-                        <input type="password" name="password" id="inputPassword">
+                        <input type="password" name="password" id="inputPassword" placeholder="Digite ou crie uma senha:">
+                        <label for="password">Confirme sua senha</label>
+                        <input type="password" name="password" id="inputPassword" placeholder="Confirme sua senha:">
 
-                        <button type="submit" class="btnRegister btnStyle">Registrar<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
-                          </svg></button>
-
+                        <div class="container-btn">
+                            <button type="submit" class="btnRegister btnStyle">Registrar<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                            </svg></button>
+                        </div>
                     </form>
 
                     <div id="textHrSpan">
