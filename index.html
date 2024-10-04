@@ -12,7 +12,23 @@
         rel="stylesheet">
     <script src="src/script/index.js" type="module" defer></script>
 </head>
-<body>
+<body> 
+    <header>
+        <nav class="nav-container">
+            <div class="img-header"> 
+                <img src="/src/img/Logo.svg" alt="Logo do Code Connect" title="Logo do Code Connect">
+            </div>  
+            <div class="link-destaque-header">
+                <a href="#">Publicar</a>
+            </div>
+        </nav>
+        <div class="search-container">
+            <div class="input-search">
+                <button><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+              </svg></button><input type="text" placeholder="Digite o que você procura" required></div>
+        </div>
+    </header>
     <section>
     <aside>
         <img src="/src/img/Logo.svg" alt="Logo do Code Connect" title="Logo do Code Connect">
@@ -66,11 +82,11 @@
             <form>
                 <div>
                     <label for="name">Nome do Projeto</label>
-                    <input type="text" id="name" name="nome" />
+                    <input type="text" id="form-Name" name="nome" />
                 </div>
                 <div>
                     <label for="form-desc">Categoria</label>
-                    <textarea name="desc" id="form-desc"></textarea>
+                    <textarea name="desc" id="form-Desc"></textarea>
                     
                 </div>
                 <div>
@@ -82,7 +98,7 @@
                 </ul>
                 <div class="container-btn">
                     <button class="btn-remove">Descartar</button>
-                    <button class="btn-publish">Publicar</button>
+                    <button class="btn-publish">Enviar</button>
                 </div>
             </form>
         </div>

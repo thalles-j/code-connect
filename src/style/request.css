@@ -26,7 +26,7 @@ section{
     margin: 10px;
     width: 800px;
     display: flex;
-    height: 720px;
+    height: 650px;
     align-self: center;
     justify-content: center;       
 }
@@ -66,14 +66,10 @@ main {
 
 .container-main h2{
     font-weight: 600;
+    margin: 1rem 0;
 
 }
-.container-main h3{
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 10px;
-    margin: 1.5rem 0;
-}
+
 .container-form{
     display: flex;
     flex-direction: column;
@@ -132,23 +128,6 @@ input:focus{
 
 }
 
-.container-checkbox{
-    margin: 3px;
-    display: flex;
-    align-items: center;
-}
-
-.container-checkbox input[type="checkbox"] {
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    border: 2px solid var(--primary-color);
-    border-radius: 5px;
-    background-color: transparent;
-    cursor: pointer;
-    position: relative;
-}
-
 #textHrSpan{
     display: inline-flex;
     text-align: center;
@@ -188,24 +167,25 @@ hr{
     width: 100%;
     text-align: center;
 }
-
-.container-login{
-    
+.container-request{
     text-align: center;
     width: 100%;  
 }
-.container-login p{
+.container-request p{
     font-size: 13px;
-    margin: 10px 0 0 8px;
+    margin: 12px 0 0 8px;
 }
-.container-login a{
+.container-request p a{
     color: var(--primary-color);
     text-decoration: none;
+    margin: 1rem 0;
+    font-size: 16px;
     
 }
-.container-login a:hover{
+.container-request a:hover{
     opacity: 0.8;
 }
+
 
 @media(max-width:730px){
     body{
@@ -216,7 +196,7 @@ hr{
         background-color: var(--itens-background);
         margin: 2rem;
         width: 650px;
-        height: 1184px;
+        height: 1054px;
         
     }
     main {
@@ -249,7 +229,18 @@ hr{
         height: auto;
         
     }
+    .container-request{
+        width: 100%;
+    }
+    .container p{
+        margin: 2rem 0;
+    }
+    .container-request p a{
+        font-size: 17px;
+        margin: 30px 0;
+    }
 }
+
 @media(max-width:450px){
     section{
         margin: 2rem;

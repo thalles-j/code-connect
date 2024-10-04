@@ -48,22 +48,6 @@ inputUpload.addEventListener('change', async (e) => {
   }
 });
 
-const btnRemoveImg = document.querySelector('#btn-remove-upload');
-
-btnRemoveImg.addEventListener('click', () =>{
-  // Verificar se existe uma imagem carregada
-  if (imgPrincipal.src && imgPrincipal.src !== window.location.href) {
-    // Se tiver imagem, remover a imagem e o nome
-    imgPrincipal.src = ""; 
-    nomeImg.innerHTML = "Envie um arquivo"; 
-    inputUpload.value = "";
-  } else {
-    // Se não tiver imagem, exibir mensagem de alerta
-    alert("Não há imagem carregada para remover.");
-  }
-});
-
-
 const inputTags = document.querySelector('#input-tags');
 const listTags = document.querySelector('.list-tags');
 
@@ -150,3 +134,50 @@ inputTags.addEventListener('keypress', async (e) => {
     }
   }
 });
+
+const btnPublish = document.querySelector('.btn-publish');
+
+  function publishProject(formNome,formDesc,tagsForm){
+    return new Promise((resolve,reject) => {
+      setTimeout(() => {
+        const deuCerto = Math.random() > 0.5;
+
+        if(deuCerto){
+          resolve('projeto publicado com sucesso.')
+        }else{
+          reject('erro ao enviar o projeto.')
+        }
+      }, 2000);
+    })
+  }
+
+btnPublish.addEventListener('click', async (e) => {
+  e.preventDefault();
+
+  const formNome = document.querySelector('.form-Name').value;
+  const formDesc = document.querySelector('.form-Desc').value;
+  const tagsForm = Array.from(listTags.querySelectorAll("p")).map((tag) => tag.textContent)
+
+  try{
+    const result = await publishProject(formNome,formDesc,tagsForm);
+    alert("deu certo");
+  } catch(erro){
+    alert("deu errado")
+  }
+
+});
+
+const btnRemoveForm = document.querySelector('.btnRemove');
+
+btnRemoveForm.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  const form = document.querySelector('form');
+  form.reset();
+
+  imgPrincipal.src = '/src/imagem1.png';
+  nomeImg.textContent = 'imagem-projeto.png'
+  listTags.innerHTML = ""
+
+})
+
