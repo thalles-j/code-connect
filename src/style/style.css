@@ -380,38 +380,51 @@ textarea{
 
 }
 @media(max-width:992px){
+    body{
+        height: 100vh;
+    }
     aside{
         display: none;
     }
-    .fixedBar{
-        display: flex;
-        position: absolute;
-        bottom: 0;
+    .container-fixedBar{
+        display: block;
+        position: fixed;
+        bottom: 0; /* Fixa a barra na parte inferior */
         left: 0;
-        width: 100%;
+        width: 100%; /* Ocupa toda a largura da tela */
         background-color: #333;
         color: white;
         text-align: center;
         padding: 10px 0;
-        z-index: 1000;
+        z-index: 1000; /* Garante que ela fique no topo de outros elementos */
     }
-    .fixedBar nav{
+    .fixedBar{
         display: inline-flex;
-        width: 100%;
+    }
+    .fixedBar ul{
+        display: inline-flex;
+        width: 100px;
+        height: auto;
+        align-items: center;
         justify-content: center;
     }
+    .fixedBar li{
+        width: 80px;
+    }
     .fixedBar li a{
-        width: 15px;
-        
+        font-size: 10px;
+        width: 50px;
+        text-decoration: none;
         text-align: center;
         margin: 0 8px;
         color: var(--text-color);
         transition: ease-in-out 300ms;
     }
+    .fixedBar img{
+        width: 33px;
+    }
     .fixedBar-links{
-        display: inline-flex;
-        margin: 1rem;
-        gap: 40px;
+        gap: 5px;
         text-align: center;
         list-style-type: none;
            

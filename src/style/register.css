@@ -14,12 +14,10 @@ body{
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: var(--font-family);
-
     display: flex;
     justify-content: center;
     align-items: start;
-    height: 100vh;
-    
+    height: 100vh; 
     padding: 56px 0;
 }
 section{
@@ -28,11 +26,9 @@ section{
     margin: 10px;
     width: 800px;
     display: flex;
-    height: 770px;
+    height: 720px;
     align-self: center;
-    justify-content: center;
-    
-    
+    justify-content: center;       
 }
 main {
     display: flex;
@@ -52,17 +48,16 @@ main {
     display: flex;
 }
 .container-img img {
-    width: 650px;
+    width: 407px;
     max-width: 100%;
     height: auto;
 }
 
 #fundoLogo{
-    width: 450px;
-    height: 600px;
+    width: 400px;
+    height: 580px;
 }
 .container-main{
-    height: 500px;
     width: 50%;
     margin: 1rem;
     display: flex;
@@ -104,7 +99,8 @@ input{
     border: solid var(--secondary-color);
 }
 input::placeholder{
-    color: var(--background-color);
+    color: var(--itens-background);
+    font-weight: 500;
 }
 input:focus{
     border: solid var(--primary-color);
@@ -219,4 +215,103 @@ hr{
 }
 .container-login a:hover{
     opacity: 0.8;
+}
+
+@media(max-width:730px){
+    body{
+        height: auto;
+    }
+    section{
+        border-radius: 20px;
+        background-color: var(--itens-background);
+        margin: 2rem;
+        width: 650px;
+        height: 1184px;
+        
+    }
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 900px;
+        padding: 00px;
+        gap: 0;
+    }
+    #fundoLogo{
+        width: 505px;
+        height: 415px;
+        margin: 0;
+        content: url('/src/img/imgRegister730.png');
+    }
+    .container-img {
+        margin: 1rem;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        width: 500px;
+        height: 500px;
+        display: flex;
+    }
+    .container-img img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        
+    }
+    .container-request{
+        width: 100%;
+    }
+    .container p{
+        margin: 2rem 0;
+    }
+    .container-request p a{
+        font-size: 17px;
+        margin: 30px 0;
+    }
+}
+
+@media(max-width:450px){
+    section{
+        margin: 2rem;
+        border-radius: 20px;
+        background-color: var(--itens-background);
+        height: 1134px;
+        
+    }
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 950px;
+        padding: 00px;
+        gap: 2px;
+        max-width: 300px;
+    }
+    #fundoLogo{
+        width: auto;
+        height: 240px;
+        margin: 0;
+    }
+    .container-img {
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+        max-width: 300px;
+        width: auto;
+        height: auto;
+        display: flex;
+    }
+    .container-img img {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;       
+    }
+    .container-main{
+        width: 100%;
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
 }

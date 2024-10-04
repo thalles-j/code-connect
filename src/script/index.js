@@ -64,35 +64,8 @@ btnRemoveImg.addEventListener('click', () =>{
 });
 
 
-
-//adicionar tags do projeto
 const inputTags = document.querySelector('#input-tags');
 const listTags = document.querySelector('.list-tags');
-
-inputTags.addEventListener('keypress', (e) =>{
-    if(e.key === 'Enter'){
-        //função para nao atualizar a pagina.
-        e.preventDefault();
-
-        const tagText = inputTags.value.trim().toLowerCase();
-        if (tagText !== "") {
-            // Chama a função que verifica se a palavra é ofensiva
-            const isOffensive = verificarPalavraOfensiva(tagText);
-
-            if (isOffensive) {
-                inputTags.classList.add('danger');
-                inputTags.value = "Palavra Ofensiva!!"
-                
-            } else {
-                inputTags.classList.remove('danger');
-                const newTag = document.createElement('li');
-                newTag.innerHTML = `<p>${tagText}</p> <img src="/src/img/close-black.svg" class="remove-tag">`;
-                listTags.appendChild(newTag);
-                inputTags.value = ""; // Limpa o campo de entrada
-            }
-        }
-    }
-});
 
 listTags.addEventListener('click', (e) =>{
   if(e.target.classList.contains('remove-tag')){
@@ -101,14 +74,79 @@ listTags.addEventListener('click', (e) =>{
   }
 });
 
-const tagsOn = ['Front-end','Programação','Data Science','Back-end','Full-stack','Desing Gráfico'];
+const tagsOn = {
+  'frontend': 'Front-end',
+  'front-end': 'Front-end',
+  'front end': 'Front-end',
+  
+  'backend': 'Back-end',
+  'back-end': 'Back-end',
+  'back end': 'Back-end',
+  
+  'fullstack': 'Full-stack',
+  'full-stack': 'Full-stack',
+  'full stack': 'Full-stack',
+  
+  'programacao': 'Programação',
+  'programação': 'Programação',
+  
+  'datascience': 'Data Science',
+  'data-science': 'Data Science',
+  'data science': 'Data Science',
+  
+  'design grafico': 'Design Gráfico',
+  'design gráfico': 'Design Gráfico',
+  'desing grafico': 'Design Gráfico',
+  'desing gráfico': 'Design Gráfico'
+};
+
+function normalizarTexto(texto) {
+  // Remove acentos e transforma em minúsculas
+  return texto.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
 
 async function verificaTagsOn(tagText) {
-  return new Promise((resolve) =>{
-    setTimeout(() =>{
-      resolve(tagsOn.includes(tagText));
-
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      // Verifica se a tag está no objeto `tagsOn` após ser normalizada
+      resolve(tagsOn.hasOwnProperty(normalizarTexto(tagText)));
     }, 1000);
   });
-  
 }
+
+// adicionar tags do projeto
+inputTags.addEventListener('keypress', async (e) => {
+  if (e.key === 'Enter') {
+    // função para não atualizar a página
+    e.preventDefault();
+
+    const tagText = inputTags.value.trim(); // Mantém o texto original
+    const tagTextNormalizado = normalizarTexto(tagText); // Normaliza o texto para comparações
+
+    // Verificação de limite de caracteres
+    if (tagText.length > 20) {
+      inputTags.classList.add('danger');
+      inputTags.value = "Máximo de 20 caracteres!";
+      return; // Impede a continuação da execução se o limite for excedido
+    }
+
+    if (tagText !== "") {
+      // Chama a função que verifica se a tag está na lista permitida
+      const tagOnly = await verificaTagsOn(tagTextNormalizado);
+
+      if (!tagOnly) {
+        inputTags.classList.add('danger');
+        inputTags.value = "Tag não permitida!";
+      } else {
+        inputTags.classList.remove('danger');
+        // Mapeia para o formato correto da tag
+        const formattedTag = tagsOn[tagTextNormalizado];
+        
+        const newTag = document.createElement('li');
+        newTag.innerHTML = `<p>${formattedTag}</p> <img src="/src/img/close-black.svg" class="remove-tag">`;
+        listTags.appendChild(newTag);
+        inputTags.value = ""; // limpa o campo de entrada
+      }
+    }
+  }
+});

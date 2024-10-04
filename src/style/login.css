@@ -14,7 +14,6 @@ body{
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: var(--font-family);
-
     display: flex;
     justify-content: center;
     align-items: start;
@@ -29,8 +28,6 @@ section{
     display: flex;
     align-self: center;
     justify-content: center;
-    
-    
 }
 main {
     display: flex;
@@ -101,7 +98,8 @@ input{
     border: solid var(--secondary-color);
 }
 input::placeholder{
-    color: var(--text-color);
+    color: var(--itens-background);
+    font-weight: 500;
 }
 input:focus{
     border: solid var(--primary-color);
