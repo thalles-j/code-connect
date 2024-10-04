@@ -211,6 +211,7 @@ hr{
 .container-request a{
     color: var(--primary-color);
     text-decoration: none;
+    margin: 1rem 0;
     
 }
 .container-request a:hover{
@@ -261,9 +262,12 @@ hr{
     .container-request{
         width: 100%;
     }
-    .container-request span a{
+    .container p{
+        margin: 2rem 0;
+    }
+    .container-request a{
         font-size: 17px;
-        margin: 5px;
+        margin: 30px 0;
     }
 }
 

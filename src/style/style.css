@@ -326,6 +326,9 @@ textarea{
     color: rgb(186, 0, 0);
     outline: none;
 }
+.fixedBar{
+    display: none;
+}
 
 @media(max-width:1500px){
     section{
@@ -371,5 +374,46 @@ textarea{
         flex-direction: column;
         width: 100%;
         max-width: 400px;
+    }
+}
+@media(max-width:1200px){
+
+}
+@media(max-width:992px){
+    aside{
+        display: none;
+    }
+    .fixedBar{
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+    .fixedBar nav{
+        display: inline-flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .fixedBar li a{
+        width: 15px;
+        
+        text-align: center;
+        margin: 0 8px;
+        color: var(--text-color);
+        transition: ease-in-out 300ms;
+    }
+    .fixedBar-links{
+        display: inline-flex;
+        margin: 1rem;
+        gap: 40px;
+        text-align: center;
+        list-style-type: none;
+           
     }
 }
