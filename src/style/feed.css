@@ -1,0 +1,219 @@
+@charset "UTF-8";
+
+:root{
+    --background-color:#00090E;
+    --text-color:#E1E1E1;
+    --primary-color:#81FE88;
+    --secondary-color:#888888;
+    --tag-color:#171D1F;
+    --font-family: "Prompt", sans-serif;
+    --itens-background:#171D1F;
+}
+
+body{
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: 100vh;
+   
+}
+
+header{
+    margin: 1rem;
+    width: 1200px;
+    height: 100px;
+    display: grid;
+    padding: 10px;
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.img-header img {
+    height: 50px; 
+
+}
+#img-header-header{
+    margin-left: 2rem;
+}
+
+.link-destaque-header a{
+    margin-right:5rem;
+    background-color: var(--background-color);
+    border:1px solid var(--primary-color);
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: ease-in-out 300ms;
+    font-weight: 500;
+}
+.link-destaque-header a:hover{
+    background-color: var(--primary-color);
+    color: var(--itens-background);
+
+}
+.search-container {
+    margin: 1rem;
+}
+.input-search:focus-within{
+    outline: 2px solid var(--primary-color);
+    border-radius: 0;
+
+}
+.input-search{
+    padding: 10px 8px;
+    gap: 0;
+    display: inline-flex;
+    background-color: var(--itens-background);
+    width: 1100px;
+}
+.input-search button{
+    border: none;
+    background-color: var(--itens-background);
+    width: 40px;
+    height: 40px;
+}
+.input-search svg{
+    background-color: var(--itens-background);
+    color: var(--secondary-color);
+    width: 20px;
+    height: 20px;
+}
+
+.input-search input {
+    width: 100%;
+    background-color: var(--itens-background);
+    padding: 10px; 
+    border: none; 
+    border-radius: 4px;
+    caret-color:var(--primary-color);
+    color: var(--text-color);
+    text-decoration: 600;
+    font-size: 18px;
+}
+.input-search input::placeholder{
+    font-family: var(--font-family);
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 16px;
+    opacity: 1;
+}
+.input-search input:focus{
+    outline: none;
+}
+
+.container-fixedBar{
+    display: none;
+    position: fixed;
+    bottom: 0; /* Fixa a barra na parte inferior */
+    left: 0;
+    width: 100%; /* Ocupa toda a largura da tela */
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000; /* Garante que ela fique no topo de outros elementos */
+}
+.fixedBar{
+    display: inline-flex;
+}
+.fixedBar ul{
+    display: inline-flex;
+    width: 100px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+.fixedBar li{
+    width: 80px;
+}
+.fixedBar li a{
+    font-size: 10px;
+    width: 50px;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 8px;
+    color: var(--text-color);
+    transition: ease-in-out 300ms;
+}
+.fixedBar img{
+    width: 33px;
+}
+.fixedBar-links{
+    gap: 5px;
+    text-align: center;
+    list-style-type: none;
+       
+}
+
+section{
+    width: 1200px;
+    margin: 1rem;
+    display: flex;
+    gap: 26px;
+}
+main{
+    background-color: var(--itens-background);
+    border-radius: 10px;
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    gap: 24px;
+    width: 1000px;
+    
+}
+
+aside{
+    text-align: center;
+    background-color: var(--itens-background);
+    border-radius: 10px;
+    height: 1200px;
+    padding: 40px 16px;
+    width: 150px;
+
+}
+nav ul li{
+    width: 100%;
+    height: auto;
+}
+
+.list-links{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 50px;
+    
+    align-items: center;
+    padding: 15px;
+    list-style-type: none;
+
+}
+.list-links li a{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-decoration:none;
+    color: var(--secondary-color);
+    font-size: 22px;
+}
+.list-links li a:hover{
+    color: var(--primary-color);
+}
+.list-links li:first-of-type a {
+    color: var(--primary-color);
+
+}
+.link-destaque{
+    border:1px solid var(--primary-color);
+    padding: 12px 30px;
+    border-radius: 8px;
+}
