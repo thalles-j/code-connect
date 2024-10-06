@@ -133,7 +133,7 @@ main{
     color: var(--text-color);
 }
 
-<<<<<<< HEAD:src/style/publish.css
+
 .container-img-name{
     display: flex;
     gap: 8px;
@@ -151,8 +151,7 @@ main{
 .container-desc{
     width: 442px;
 }
-=======
->>>>>>> 982f716db5536b5e8657152af82b1c4e9ecafe95:src/style/style.css
+
 .container-btn{
     display: flex;
     gap: 24px;
@@ -292,17 +291,14 @@ textarea{
 }
 .main-img{
     border-radius: 8px;
-<<<<<<< HEAD:src/style/publish.css
     height: 350px;
     object-fit: cover;
-    
-=======
     height: 100%;
     max-width: 1250px;
     max-height: 1200px;
     object-fit: cover;
 }
->>>>>>> 982f716db5536b5e8657152af82b1c4e9ecafe95:src/style/style.css
+
 
 @media(min-width:1505px){
     .main-img{
@@ -322,11 +318,8 @@ textarea{
     justify-content: center;
     display: flex;
     width: 600px;
-<<<<<<< HEAD:src/style/publish.css
-=======
-    max-width: fit-content;
 
->>>>>>> 982f716db5536b5e8657152af82b1c4e9ecafe95:src/style/style.css
+
 }
 #btn-upload{
     margin: 16px 0 8px 0;
