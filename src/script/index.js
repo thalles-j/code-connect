@@ -49,6 +49,7 @@ inputUpload.addEventListener('change', async (e) => {
 });
 
 const inputTags = document.querySelector('#input-tags');
+const divInputTags = document.querySelector('.input-tags-box')
 const listTags = document.querySelector('.list-tags');
 
 listTags.addEventListener('click', (e) =>{
@@ -99,8 +100,8 @@ async function verificaTagsOn(tagText) {
 }
 
 // adicionar tags do projeto
-inputTags.addEventListener('keypress', async (e) => {
-  if (e.key === 'Enter') {
+const btnInputTags = document.querySelector('#btnInputTags')
+btnInputTags.addEventListener('click', async (e) => {
     // função para não atualizar a página
     e.preventDefault();
 
@@ -109,7 +110,7 @@ inputTags.addEventListener('keypress', async (e) => {
 
     // Verificação de limite de caracteres
     if (tagText.length > 20) {
-      inputTags.classList.add('danger');
+      divInputTags.classList.add('danger');
       inputTags.value = "Máximo de 20 caracteres!";
       return; // Impede a continuação da execução se o limite for excedido
     }
@@ -119,10 +120,10 @@ inputTags.addEventListener('keypress', async (e) => {
       const tagOnly = await verificaTagsOn(tagTextNormalizado);
 
       if (!tagOnly) {
-        inputTags.classList.add('danger');
+        divInputTags.classList.add('danger');
         inputTags.value = "Tag não permitida!";
       } else {
-        inputTags.classList.remove('danger');
+        divInputTags.classList.remove('danger');
         // Mapeia para o formato correto da tag
         const formattedTag = tagsOn[tagTextNormalizado];
         
@@ -132,7 +133,7 @@ inputTags.addEventListener('keypress', async (e) => {
         inputTags.value = ""; // limpa o campo de entrada
       }
     }
-  }
+
 });
 
 const btnPublish = document.querySelector('.btn-publish');

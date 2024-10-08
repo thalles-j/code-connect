@@ -27,7 +27,7 @@ header{
 
 .search-container {
     width: 100%;
-    margin: 1rem;
+    margin: 1rem 1.5rem;
 }
 .input-search:focus-within{
     outline: 2px solid var(--primary-color);
@@ -128,14 +128,65 @@ section{
     margin: 1rem;
 }
 
+
+
+.recent-bar{
+    display: block;
+    width: 100%;
+    height: 55px;
+    text-align: center;
+    align-items: center;
+}
+.recent-btn{
+    margin: 1rem;
+}
+.recent-btn button{
+    font-family: var(--font-family);
+    font-size: 16px;
+    color: var(--primary-color);
+    text-decoration: underline;
+    background-color: var(--background-color);
+    border: none;
+}
+.recent-btn button:hover{
+    opacity: 0.8;
+}
 main{
     border-radius: 10px;
     padding: 30px;
     height: 100%;
     display: flex;
+    flex-wrap: wrap;
     gap: 24px;
     width: 100%;
     
+}
+.item{
+    width: 48%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--itens-background);
+}
+.container-background-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    width: 100%;
+    height: 50%;
+}
+.container-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+}
+.container-img img{
+    width: 670px;
+    height: 195px;
+    max-width: fit-content;
 }
 
 aside{
@@ -151,17 +202,14 @@ nav ul li{
     width: 100%;
     height: auto;
 }
-
 .list-links{
     display: flex;
     flex-direction: column;
     gap: 40px;
     margin-top: 50px;
-    
     align-items: center;
     padding: 15px;
     list-style-type: none;
-
 }
 .list-links li a{
     display: flex;
@@ -329,6 +377,9 @@ nav ul li{
         background-color: var(--primary-color);
         color: var(--itens-background);
 
+    }
+    #search-section{
+        display: none;
     }
     .search-container {
         margin: 1rem;
