@@ -168,6 +168,7 @@ main{
     flex-direction: column;
     background-color: var(--itens-background);
 }
+
 .container-background-img{
     display: flex;
     align-items: center;
@@ -188,6 +189,20 @@ main{
     height: 195px;
     max-width: fit-content;
 }
+
+.container-desc-item{
+    margin: 5px 10px;
+}
+.container-text h3{
+    font-weight: 500;
+    margin: 1rem 0 2rem;
+}
+.container-text h3,p{
+    color: var(--text-color);
+    opacity: 0.9;
+    
+}
+
 
 aside{
     text-align: center;
