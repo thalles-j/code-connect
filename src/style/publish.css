@@ -72,7 +72,7 @@ nav li a:active{
     align-items: center;
     text-decoration:none;
     color: var(--secondary-color);
-    font-size: 22px;
+    font-size: 22px;        
 
 }
 .list-links li a:hover{
