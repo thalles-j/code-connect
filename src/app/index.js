@@ -1,4 +1,3 @@
-import { verificarPalavraOfensiva } from "./verificarPalavras.js";
 
 const uploadBtn = document.querySelector("#btn-upload");
 const inputUpload = document.querySelector("#img-upload");
@@ -63,10 +62,12 @@ const tagsOn = {
   'frontend': 'Front-end',
   'front-end': 'Front-end',
   'front end': 'Front-end',
+  'front': 'Front-end',
   
   'backend': 'Back-end',
   'back-end': 'Back-end',
   'back end': 'Back-end',
+  'back': 'Back-end',
   
   'fullstack': 'Full-stack',
   'full-stack': 'Full-stack',
@@ -121,14 +122,15 @@ btnInputTags.addEventListener('click', async (e) => {
 
       if (!tagOnly) {
         divInputTags.classList.add('danger');
-        inputTags.value = "Tag não permitida!";
+        inputTags.value = ''
+        inputTags.placeholder = "Tag não permitida!";
       } else {
         divInputTags.classList.remove('danger');
         // Mapeia para o formato correto da tag
         const formattedTag = tagsOn[tagTextNormalizado];
         
         const newTag = document.createElement('li');
-        newTag.innerHTML = `<p>${formattedTag}</p> <img src="/src/img/close-black.svg" class="remove-tag">`;
+        newTag.innerHTML = `<p>${formattedTag}</p> <img src="src/assets/img/close-black.svg" class="remove-tag">`;
         listTags.appendChild(newTag);
         inputTags.value = ""; // limpa o campo de entrada
       }
@@ -176,7 +178,7 @@ btnRemoveForm.addEventListener('click', (e) => {
   const form = document.querySelector('form');
   form.reset();
 
-  imgPrincipal.src = '/src/imagem1.png';
+  imgPrincipal.src = 'src/assets/img/imagem1.png';
   nomeImg.textContent = 'imagem-projeto.png'
   listTags.innerHTML = ""
 
