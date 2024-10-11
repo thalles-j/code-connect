@@ -76,69 +76,27 @@ header{
     outline: none;
 }
 
-.container-fixedBar{
-    display: none;
-    position: fixed;
-    bottom: 0; /* Fixa a barra na parte inferior */
-    left: 0;
-    width: 100%; /* Ocupa toda a largura da tela */
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    z-index: 1000; /* Garante que ela fique no topo de outros elementos */
-}
-.fixedBar{
-    display: inline-flex;
-}
-.fixedBar ul{
-    display: inline-flex;
-    width: 100px;
-    height: auto;
-    align-items: center;
-    justify-content: center;
-}
-.fixedBar li{
-    width: 80px;
-}
-.fixedBar li a{
-    font-size: 10px;
-    width: 50px;
-    text-decoration: none;
-    text-align: center;
-    margin: 0 8px;
-    color: var(--text-color);
-    transition: ease-in-out 300ms;
-}
-.fixedBar img{
-    width: 33px;
-}
-.fixedBar-links{
-    gap: 5px;
-    text-align: center;
-    list-style-type: none;
-       
-}
 section{
     display: flex;
     flex-direction: column;
 }
 #content-main{
-    width: 1100px;
-    margin: 1rem;
+    width: 1200px;
+    margin: 1rem 2rem;
 }
 
 
 
 .recent-bar{
+    margin: 1rem;
     display: block;
     width: 100%;
-    height: 55px;
+    height: 60px;
     text-align: center;
     align-items: center;
 }
 .recent-btn{
-    margin: 1rem;
+    margin: 1rem 2rem;
 }
 .recent-btn button{
     font-family: var(--font-family);
@@ -153,15 +111,16 @@ section{
 }
 main{
     border-radius: 10px;
-    padding: 30px;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
     width: 100%;
     
+    
 }
 .item{
+    border-radius: 12px;
     width: 48%;
     height: 100%;
     max-height: 600px;
@@ -171,6 +130,7 @@ main{
 }
 
 .container-background-img{
+    border-radius: 12px 12px 0 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -273,9 +233,7 @@ nav ul li{
 .container-btn-actions{
     width: 65%;
 }
-.container-acount-service{
-    width: 35%;
-}
+
 .btn-actions{
     display: block;
 }
@@ -308,19 +266,53 @@ nav ul li{
     max-width: 100%;
     width: 100%;
 }
-#id-acount{
-    width: 86px;
-
+.acount-service a{
+    text-decoration: none;
+}
+.acount-service a:hover{
+    opacity: 0.8;
 }
 
+#id-acount{
+    color: var(--primary-color);
+    text-decoration: none;
+    width: 86px;
+    font-size: 13px;
+
+}
 #img-acount{
     border-radius: 50%;
     width: 100%;
     height: 35px;
     width: 35px;
 }
+.container-fixedBar{
+    display: none;
+}
 
+@media(max-width:1500px){
+    #content-main{
+        width: 900px;
+        margin: 1rem 2rem;
+    }
+    .container-btn-actions{
+        width: 55%;
+    }
+    .container-acount-service{
+        width: 45%;
+    }
+    
 
+}
+
+@media(max-width:1300px){
+    #content-main{
+        width: 700px;
+        margin: 1rem 2rem;
+    }
+    
+
+}
 
 @media(max-width:992px){
     body{
@@ -329,21 +321,36 @@ nav ul li{
         
     }
     section{
-        margin: 0 2rem;
+        margin: 0;
         display: flex;
         gap: 0;
-        height: 1320px;
+        height: auto;
         max-width: 100%;
         width: 100%;
     }
+
+    #content-main{
+        width: 890px;
+        margin:0;
+    }
+    
+    .recent-bar{
+        margin: 1rem ;
+        display: block;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        align-items: center;
+    }
+    .recent-btn{
+        margin:0 43px 0 0;
+    }
     main{
-        flex-direction: column;
-        background-color: var(--itens-background);
+        background-color: var(--background-color);
         border-radius: 10px;
-        padding: 30px;
         height: 100%;
         display: flex;
-        gap: 0;
+        gap: 25px;
         width: 100%;
         
     }
@@ -351,7 +358,6 @@ nav ul li{
     .container-img{
         max-width: 100%;
         width: 850px;
-        height: 478px;
         padding: 24px 16px;
         background-color: var(--secondary-color);
         border-radius: 8px;
@@ -437,12 +443,13 @@ nav ul li{
     }
 
     header{
-        margin: 1rem;
+        margin: 5px 10px ;
         width: 100%;
         display: grid;
-        padding: 10px;
+        padding: 1px;
     }
     .nav-container {
+        margin: 0 1rem;
         display: flex;
         justify-content: space-between;
         align-items: center; 
@@ -471,6 +478,8 @@ nav ul li{
         display: none;
     }
     .search-container {
+        height: auto;
+        width: 95%;
         margin: 1rem;
     }
     .search-container:focus-within{
@@ -482,7 +491,7 @@ nav ul li{
         gap: 0;
         display: inline-flex;
         background-color: var(--itens-background);
-        width: 100%;
+        width: 99%;
     }
     .input-search button{
         border: none;
@@ -516,7 +525,7 @@ nav ul li{
         outline: none;
     }
 
-    aside{
+    #container-aside{
         display: none;
     }
     .container-fixedBar {
@@ -526,13 +535,14 @@ nav ul li{
         bottom: 0;       /* Coloca o contêiner no rodapé */
         left: 0;
         z-index: 1000;   /* Garante que fique por cima de outros elementos */
+        background-color: var(--itens-background);
+        border-radius: 20px 20px 0 0;
     }
     
     .fixedBar {
-        padding: 1rem;
+        padding: 1rem 0;
         display: inline-flex;
         width: 100%;
-        background-color: #333; /* Personalize conforme necessário */
     }
     
     .fixedBar-links {
@@ -541,6 +551,8 @@ nav ul li{
         height: auto;
         align-items: center;
         justify-content: center;
+        max-width: 100%;
+        margin-right: 2rem;
     }
     
     .fixedBar-links li {
@@ -574,8 +586,51 @@ nav ul li{
     }
     
 }
+@media(max-width: 765px){
+    section{
+        margin: 0;
+        display: flex;
+        gap: 0;
+        height: auto;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    #content-main{
+        width: 600px;
+        margin:0;
+    }
+    .recent-bar{
+        margin: 1rem;
+        display: block;
+        width: 100%;
+        height: 60px;
+        text-align: center;
+        align-items: center;
+    }
+    .recent-btn
+
+    main{
+        background-color: var(--itens-background);
+        border-radius: 10px;
+        padding: 0;
+        height: 100%;
+        display: flex;
+        gap: 0;
+        width: 100%;
+        
+    }
+    .item{
+        width: 650px;
+        max-width: 100%;
+    }
+}
+
 
 @media(max-width: 350px){
+    .img-header img{
+        width: 100px;
+    }
     .nav-container{
         gap: 2px;
     }
@@ -593,4 +648,35 @@ nav ul li{
         width: 96%;
         height: 100%;
     }
+    .container-fixedBar {
+        display: grid;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+    }
+    .fixedBar {
+        padding: 1rem 0;
+        display: inline-flex;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .fixedBar-links {
+        display: inline-flex;
+        width: 98%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        margin-right: 3rem;
+    }
+    .fixedBar-links li {
+        list-style-type: none;
+        margin: 0 15px 15px 0;
+        
+    }
+    
+    
 }
